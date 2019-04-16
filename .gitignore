@@ -1,0 +1,12 @@
+
+\.vs/ProcessAnalyzer/DesignTimeBuild/
+
+\.vs/ProcessAnalyzer/v16/
+
+ProcessAnalyzer/bin/Debug/netcoreapp2\.1/
+
+ProcessAnalyzer/obj/Debug/netcoreapp2\.1/
+
+ProcessAnalyzer/obj/
+
+ProcessAnalyzer\.sln
