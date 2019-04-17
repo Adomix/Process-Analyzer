@@ -10,3 +10,9 @@ ProcessAnalyzer/obj/Debug/netcoreapp2\.1/
 ProcessAnalyzer/obj/
 
 ProcessAnalyzer\.sln
+
+ProcessAnalyzer/bin/Release/netcoreapp2\.1/
+
+ProcessAnalyzer/Properties/PublishProfiles/
+
+ProcessAnalyzer/ProcessAnalyzer\.csproj\.user

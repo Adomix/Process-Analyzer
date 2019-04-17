@@ -4,8 +4,9 @@ namespace ProcessAnalyzer
 {
     public class ConsoleWriter
     {
-        public static void ConsoleWrite(LogMsg msg)
+        public static void ConsoleWrite(string prefix, LogMsg msg)
         {
+            Console.Write($"[{prefix}] ");
             switch (msg.Status)
             {
                 case Statuses.Success:
@@ -14,11 +15,14 @@ namespace ProcessAnalyzer
                 case Statuses.Failed:
                     Console.ForegroundColor = ConsoleColor.Red;
                     break;
-                case Statuses.Exception:
-                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                case Statuses.Info:
+                    Console.ForegroundColor = ConsoleColor.Cyan;
                     break;
                 case Statuses.Waiting:
                     Console.ForegroundColor = ConsoleColor.Yellow;
+                    break;
+                case Statuses.Exception:
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
                     break;
             }
             Console.Write($"[{msg.Status,-9}] ");
@@ -26,11 +30,13 @@ namespace ProcessAnalyzer
             Console.WriteLine($"{msg.Message}");
         }
 
-        public static void WriteInput()
+        public static string WriteInput(string prefix)
         {
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.Write("> ");
+            Console.Write($"[{prefix}] ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write($">> ");
             Console.ResetColor();
+            return Console.ReadLine();
         }
     }
 
@@ -38,8 +44,9 @@ namespace ProcessAnalyzer
     {
         Success = 0,
         Failed = 1,
-        Exception = 2,
-        Waiting = 3
+        Info = 2,
+        Waiting = 3,
+        Exception = 4
     }
 
     public struct LogMsg

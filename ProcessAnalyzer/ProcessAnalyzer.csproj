@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Colorful.Console" Version="1.2.9" />
     <PackageReference Include="Humanizer" Version="2.6.2" />
   </ItemGroup>
 
