@@ -25,6 +25,7 @@ namespace ProcessAnalyzer
                     Console.ForegroundColor = ConsoleColor.DarkRed;
                     break;
             }
+
             Console.Write($"[{msg.Status,-9}] ");
             Console.ResetColor();
             Console.WriteLine($"{msg.Message}");
@@ -34,7 +35,7 @@ namespace ProcessAnalyzer
         {
             Console.Write($"[{prefix}] ");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write($">> ");
+            Console.Write(">> ");
             Console.ResetColor();
             return Console.ReadLine();
         }

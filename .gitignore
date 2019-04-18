@@ -16,3 +16,9 @@ ProcessAnalyzer/bin/Release/netcoreapp2\.1/
 ProcessAnalyzer/Properties/PublishProfiles/
 
 ProcessAnalyzer/ProcessAnalyzer\.csproj\.user
+
+\.idea/\.idea\.ProcessAnalyzer/\.idea/
+
+\.idea/\.idea\.ProcessAnalyzer/
+
+ProcessAnalyzer\.sln\.DotSettings\.user
