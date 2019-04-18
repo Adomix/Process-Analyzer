@@ -79,7 +79,7 @@ namespace ProcessAnalyzer
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.Write($"{prop.Name} ");
                     Console.ResetColor();
-                    Console.WriteLine(typeof(Process).GetProperty(prop.Name).GetValue(proc) ?? "null");
+                    Console.WriteLine(prop.GetValue(proc) ?? "null");
                 }
                 catch (Exception e)
                 {
