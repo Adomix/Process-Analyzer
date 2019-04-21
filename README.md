@@ -1,1 +1,1 @@
-ProcessAnalyzer
+Simple process info reader using reflection
